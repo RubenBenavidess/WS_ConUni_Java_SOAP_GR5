@@ -36,6 +36,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.plaf.basic.BasicButtonUI;
 import javax.swing.border.EmptyBorder;
 
 public class ConversionUnidadesVista extends JFrame {
@@ -93,8 +94,8 @@ public class ConversionUnidadesVista extends JFrame {
     private void configurarVentana() {
         setTitle("Cliente Escritorio GR5 - Conversion de Unidades");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setMinimumSize(new Dimension(1020, 620));
-        setSize(1060, 640);
+        setMinimumSize(new Dimension(1120, 700));
+        setSize(1240, 760);
         setLocationRelativeTo(null);
     }
 
@@ -102,7 +103,7 @@ public class ConversionUnidadesVista extends JFrame {
         PanelFondoDegradado panelPrincipal = new PanelFondoDegradado(
                 new Color(8, 35, 62),
                 new Color(13, 94, 126),
-                "/ec/edu/monster/assets/fondo.jpg"
+                null
         );
         panelPrincipal.setLayout(new BorderLayout(18, 18));
         panelPrincipal.setBorder(new EmptyBorder(18, 18, 18, 18));
@@ -110,7 +111,7 @@ public class ConversionUnidadesVista extends JFrame {
 
         JPanel panelCabecera = crearPanelTarjeta(new BorderLayout(14, 8));
 
-        JLabel lblTitulo = new JLabel("Conversor inteligente de unidades", SwingConstants.LEFT);
+        JLabel lblTitulo = new JLabel("Conversor de Unidades", SwingConstants.LEFT);
         lblTitulo.setFont(new Font("Trebuchet MS", Font.BOLD, 27));
         lblTitulo.setForeground(new Color(8, 54, 93));
 
@@ -134,7 +135,7 @@ public class ConversionUnidadesVista extends JFrame {
         panelTextosCabecera.add(lblSubtitulo);
         panelTextosCabecera.add(lblInfoSesion);
 
-        JLabel lblIcono = new JLabel(cargarIcono("/ec/edu/monster/assets/img-monster.png", 130, 130));
+        JLabel lblIcono = new JLabel(cargarIcono("/ec/edu/monster/assets/img-monster.jpeg", 130, 130));
         lblIcono.setHorizontalAlignment(SwingConstants.CENTER);
 
         panelCabecera.add(panelTextosCabecera, BorderLayout.CENTER);
@@ -163,8 +164,8 @@ public class ConversionUnidadesVista extends JFrame {
         estilizarCampo(txtValor);
 
         estilizarBotonPrincipal(btnConvertir);
-        estilizarBotonSecundario(btnLimpiar);
-        estilizarBotonSecundario(btnCerrarSesion);
+        estilizarBotonPrincipal(btnLimpiar);
+        estilizarBotonPrincipal(btnCerrarSesion);
 
         lblResultado.setFont(new Font("Trebuchet MS", Font.BOLD, 15));
         lblResultado.setForeground(new Color(8, 77, 118));
@@ -177,30 +178,29 @@ public class ConversionUnidadesVista extends JFrame {
         restricciones.gridx = 0;
         restricciones.gridy = 0;
         restricciones.gridwidth = 2;
-        panelFormulario.add(crearTituloPanel("Panel de conversion"), restricciones);
-
-        restricciones.gridy = 1;
-        restricciones.gridwidth = 1;
+        restricciones.insets = new Insets(16, 10, 8, 10);
         panelFormulario.add(lblTipo, restricciones);
 
-        restricciones.gridy = 2;
+        restricciones.gridy = 1;
+        restricciones.insets = new Insets(6, 10, 8, 10);
         restricciones.weightx = 1;
         panelFormulario.add(cmbTipoConversion, restricciones);
 
-        restricciones.gridy = 3;
+        restricciones.gridy = 2;
         restricciones.weightx = 0;
         panelFormulario.add(lblValor, restricciones);
 
-        restricciones.gridy = 4;
+        restricciones.gridy = 3;
         restricciones.weightx = 1;
         panelFormulario.add(txtValor, restricciones);
 
-        restrictionsRow(panelFormulario, restricciones, 5, lblUnidadInicial, cmbUnidadInicial);
-        restrictionsRow(panelFormulario, restricciones, 7, lblUnidadFinal, cmbUnidadFinal);
+        restrictionsRow(panelFormulario, restricciones, 4, lblUnidadInicial, cmbUnidadInicial);
+        restrictionsRow(panelFormulario, restricciones, 6, lblUnidadFinal, cmbUnidadFinal);
 
-        restricciones.gridy = 9;
+        restricciones.gridy = 8;
         restricciones.gridx = 0;
         restricciones.gridwidth = 1;
+        restricciones.insets = new Insets(10, 10, 8, 10);
         restricciones.weightx = 0.5;
         panelFormulario.add(btnConvertir, restricciones);
 
@@ -208,12 +208,14 @@ public class ConversionUnidadesVista extends JFrame {
         panelFormulario.add(btnLimpiar, restricciones);
 
         restricciones.gridx = 0;
-        restricciones.gridy = 10;
+        restricciones.gridy = 9;
         restricciones.gridwidth = 2;
+        restricciones.insets = new Insets(10, 10, 8, 10);
         restricciones.weightx = 0;
         panelFormulario.add(lblResultado, restricciones);
 
-        restricciones.gridy = 11;
+        restricciones.gridy = 10;
+        restricciones.insets = new Insets(10, 10, 8, 10);
         panelFormulario.add(btnCerrarSesion, restricciones);
 
         return panelFormulario;
@@ -289,7 +291,7 @@ public class ConversionUnidadesVista extends JFrame {
             }
         };
         panel.setOpaque(false);
-        panel.setBorder(new EmptyBorder(18, 18, 18, 18));
+        panel.setBorder(new EmptyBorder(26, 18, 18, 18));
         return panel;
     }
 
@@ -302,7 +304,7 @@ public class ConversionUnidadesVista extends JFrame {
 
     private JLabel crearEtiquetaCampo(String texto) {
         JLabel etiqueta = new JLabel(texto, SwingConstants.LEFT);
-        etiqueta.setFont(new Font("Verdana", Font.BOLD, 13));
+        etiqueta.setFont(new Font("Verdana", Font.BOLD, 14));
         etiqueta.setForeground(new Color(27, 66, 91));
         return etiqueta;
     }
@@ -438,21 +440,17 @@ public class ConversionUnidadesVista extends JFrame {
     }
 
     private void estilizarBotonPrincipal(JButton boton) {
-        boton.setFont(new Font("Trebuchet MS", Font.BOLD, 15));
-        boton.setBackground(new Color(23, 121, 166));
+        boton.setUI(new BasicButtonUI());
+        boton.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
+        boton.setBackground(new Color(5, 104, 157));
         boton.setForeground(Color.WHITE);
-        boton.setFocusPainted(false);
-        boton.setBorder(new EmptyBorder(10, 12, 10, 12));
-    }
-
-    private void estilizarBotonSecundario(JButton boton) {
-        boton.setFont(new Font("Trebuchet MS", Font.BOLD, 14));
-        boton.setBackground(new Color(236, 247, 253));
-        boton.setForeground(new Color(18, 79, 112));
+        boton.setOpaque(true);
+        boton.setContentAreaFilled(true);
+        boton.setBorderPainted(true);
         boton.setFocusPainted(false);
         boton.setBorder(BorderFactory.createCompoundBorder(
-                BorderFactory.createLineBorder(new Color(141, 185, 208), 1),
-                new EmptyBorder(9, 12, 9, 12)
+                BorderFactory.createLineBorder(new Color(3, 72, 109), 2),
+                new EmptyBorder(10, 18, 10, 18)
         ));
     }
 

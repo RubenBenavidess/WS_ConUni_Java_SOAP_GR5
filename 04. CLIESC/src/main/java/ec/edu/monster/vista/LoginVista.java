@@ -57,7 +57,7 @@ public class LoginVista extends JFrame {
         PanelFondoDegradado panelPrincipal = new PanelFondoDegradado(
                 new Color(12, 31, 56),
                 new Color(23, 84, 134),
-                "/ec/edu/monster/assets/fondo.jpg"
+                null
         );
         panelPrincipal.setLayout(new GridBagLayout());
         panelPrincipal.setBorder(new EmptyBorder(24, 24, 24, 24));
@@ -66,7 +66,7 @@ public class LoginVista extends JFrame {
         JPanel tarjeta = crearPanelTarjeta(new BorderLayout(20, 12));
         tarjeta.setPreferredSize(new Dimension(700, 360));
 
-        JLabel lblImagen = new JLabel(cargarIcono("/ec/edu/monster/assets/img-monster.png", 230, 230));
+        JLabel lblImagen = new JLabel(cargarIcono("/ec/edu/monster/assets/img-monster.jpeg", 230, 230));
         lblImagen.setHorizontalAlignment(SwingConstants.CENTER);
         tarjeta.add(lblImagen, BorderLayout.WEST);
 
@@ -80,11 +80,12 @@ public class LoginVista extends JFrame {
         restricciones.fill = GridBagConstraints.HORIZONTAL;
 
         JLabel lblTitulo = new JLabel(
-            "<html><div style='text-align:center;'>Sistema de Conversion<br>de Unidades</div></html>",
+            "<html><div style='text-align:center; width:320px;'>Sistema de Conversion<br>de Unidades</div></html>",
             SwingConstants.CENTER
         );
-        lblTitulo.setFont(new Font("Trebuchet MS", Font.BOLD, 25));
+        lblTitulo.setFont(new Font("Trebuchet MS", Font.BOLD, 23));
         lblTitulo.setForeground(new Color(12, 52, 89));
+        lblTitulo.setBorder(new EmptyBorder(0, 8, 0, 8));
 
         JLabel lblSubtitulo = new JLabel("GRUPO #5", SwingConstants.CENTER);
         lblSubtitulo.setFont(new Font("Trebuchet MS", Font.BOLD, 16));
@@ -112,12 +113,15 @@ public class LoginVista extends JFrame {
         restricciones.gridy = 0;
         restricciones.gridwidth = 2;
         restricciones.anchor = GridBagConstraints.CENTER;
+        restricciones.insets = new Insets(2, 6, 4, 6);
         panelFormulario.add(lblTitulo, restricciones);
 
         restricciones.gridy = 1;
+        restricciones.insets = new Insets(0, 6, 10, 6);
         panelFormulario.add(lblSubtitulo, restricciones);
 
         restricciones.gridy = 2;
+        restricciones.insets = new Insets(5, 6, 5, 6);
         restricciones.gridwidth = 1;
         restricciones.anchor = GridBagConstraints.WEST;
         panelFormulario.add(lblUsuario, restricciones);
