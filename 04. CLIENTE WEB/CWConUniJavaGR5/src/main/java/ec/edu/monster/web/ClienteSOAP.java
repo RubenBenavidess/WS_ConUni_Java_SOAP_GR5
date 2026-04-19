@@ -8,7 +8,7 @@ import java.net.http.HttpResponse;
 public class ClienteSOAP {
     
     // URL de tu Web Service
-    private static final String URL_WS = "http://localhost:8080/04.%20SERVIDOR/WSConversorUnidades";
+    private static final String URL_WS = "http://localhost:8080/04_SERVIDOR/WSConversorUnidades";
 
     public static String login(String usuario, String contrasenia) throws Exception {
         String xml = 
@@ -25,18 +25,37 @@ public class ClienteSOAP {
         return enviarPeticion(xml);
     }
 
-    public static String convertir(String token, String valor, String origen, String destino) throws Exception {
+    // Método actualizado: Recibe 5 parámetros
+    public static String convertir(String token, String tipo, String valor, String origen, String destino) throws Exception {
+        
+        // Determinamos la operación SOAP (nombre del método en tu Web Service)
+        String operacionSOAP = "";
+        switch (tipo) {
+            case "Longitud":
+                operacionSOAP = "convertirLongitud";
+                break;
+            case "Masa":
+                operacionSOAP = "convertirMasa";
+                break;
+            case "Temperatura":
+                operacionSOAP = "convertirTemperatura";
+                break;
+            default:
+                throw new Exception("Tipo de conversión no válido: " + tipo);
+        }
+
+        // Construimos el XML inyectando la etiqueta de la operación dinámicamente
         String xml = 
             "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:ws=\"http://ws.monster.edu.ec/\">\n" +
             "   <soapenv:Header>\n" +
             "      <ws:token>" + token + "</ws:token>\n" +
             "   </soapenv:Header>\n" +
             "   <soapenv:Body>\n" +
-            "      <ws:convertirLongitud>\n" +
+            "      <ws:" + operacionSOAP + ">\n" +
             "         <valor>" + valor + "</valor>\n" +
             "         <unidadInicial>" + origen + "</unidadInicial>\n" +
             "         <unidadFinal>" + destino + "</unidadFinal>\n" +
-            "      </ws:convertirLongitud>\n" +
+            "      </ws:" + operacionSOAP + ">\n" +
             "   </soapenv:Body>\n" +
             "</soapenv:Envelope>";
             
