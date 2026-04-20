@@ -8,7 +8,7 @@ import java.net.http.HttpResponse;
 public class ClienteSOAP {
     
     // URL de tu Web Service
-    private static final String URL_WS = "http://localhost:8080/04_SERVIDOR/WSConversorUnidades";
+    private static final String URL_WS = "http://localhost:8080/04.%20SERVIDOR/WSConversorUnidades";
 
     public static String login(String usuario, String contrasenia) throws Exception {
         String xml = 
