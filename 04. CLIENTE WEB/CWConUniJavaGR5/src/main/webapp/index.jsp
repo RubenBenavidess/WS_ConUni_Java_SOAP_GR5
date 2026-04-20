@@ -1,26 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="ec.edu.monster.web.ClienteSOAP"%>
 <%
-    String mensajeError = "";
-    // Si el formulario fue enviado
-    if ("POST".equalsIgnoreCase(request.getMethod())) {
-        String usr = request.getParameter("usuario");
-        String pwd = request.getParameter("contrasenia");
-        try {
-            // Llamamos a nuestra clase Java
-            String tokenGenerado = ClienteSOAP.login(usr, pwd);
-            
-            if (tokenGenerado != null && !tokenGenerado.contains("Error") && !tokenGenerado.contains("Respuesta no válida")) {
-                // Login exitoso: Guardamos el token en la sesión web
-                session.setAttribute("tokenGlobal", tokenGenerado);
-                response.sendRedirect("conversor.jsp"); // Saltamos a la otra página
-                return;
-            } else {
-                mensajeError = "Credenciales incorrectas.";
-            }
-        } catch (Exception e) {
-            mensajeError = "Falla de conexión: " + e.getMessage();
-        }
+    // Recuperar el mensaje de error enviado por el Servlet (si existe)
+    String mensajeError = (String) request.getAttribute("mensajeError");
+    if (mensajeError == null) {
+        mensajeError = "";
     }
 %>
 <!DOCTYPE html>
@@ -58,7 +41,6 @@
             justify-content: center;
             align-items: center;
             padding: 5px;
-            /*background-color: #ffffff;  Fondo blanco para que la imagen resalte si tiene transparencia */
         }
 
         .img-panel img {
@@ -171,7 +153,7 @@
             
             <p class="error"><%= mensajeError %></p>
             
-            <form method="POST">
+            <form action="LoginServlet" method="POST">
                 <label for="usuario">Usuario</label>
                 <input type="text" id="usuario" name="usuario" required>
                 

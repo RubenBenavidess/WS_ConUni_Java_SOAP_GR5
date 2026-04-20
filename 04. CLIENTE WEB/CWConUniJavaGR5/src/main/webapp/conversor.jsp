@@ -131,8 +131,12 @@
         <div class="header-info">
             <h1>Conversor inteligente de unidades</h1>
             <p>Longitud, masa y temperatura con seguridad por token</p>
-            <div class="endpoint">
-                Endpoint: http://localhost:8080/04.%20SERVIDOR/WSConversorUnidades | Token: <%= tokenActivo.substring(0, Math.min(tokenActivo.length(), 15)) %>...
+            <div class="endpoint" style="display: flex; align-items: center; gap: 15px;">
+                <span>Endpoint: http://localhost:8080/04.%20SERVIDOR/WSConversorUnidades | Token: <%= tokenActivo.substring(0, Math.min(tokenActivo.length(), 15)) %>...</span>
+                <a href="${pageContext.request.contextPath}/LogoutServlet" 
+                    style="background-color: #d93025; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px; font-weight: bold;">
+                    Cerrar sesión
+                 </a>
             </div>
         </div>
         <div class="header-img">
