@@ -19,7 +19,7 @@ public class ClienteWSConversor {
     private static final QName QNOMBRE_PUERTO = new QName(ESPACIO_NOMBRES, "WSConversorUnidadesPort");
 
     private static final List<String> BASES_URL_POR_DEFECTO = List.of(
-            "http://localhost:8080/04.%20SERVIDOR",
+            "http://localhost:8080/04.SERVIDOR",
             "http://localhost:8080/WS_ConUni_Java_GR5",
             "http://localhost:8080/WS_ConUni_Java_GR5-1.0-SNAPSHOT"
     );
