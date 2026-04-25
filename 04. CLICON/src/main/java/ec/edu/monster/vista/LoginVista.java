@@ -13,7 +13,8 @@ public class LoginVista {
     private LoginControlador loginControlador;
 
     public void iniciar() {
-        mensajes.mostrarTitulo("SISTEMA DE CONVERSION DE UNIDADES - CLIENTE CONSOLA GR5");
+        this.mensajeBienvenida();
+        mensajes.mostrarTitulo("=== SISTEMA DE CONVERSION DE UNIDADES - CLIENTE CONSOLA GR5 ===");
 
         try {
             this.loginControlador = new LoginControlador();
@@ -48,6 +49,24 @@ public class LoginVista {
                 mensajes.mostrarError(ex.getMessage());
             }
         }
+    }
+    public void mensajeBienvenida() {
+        // Códigos ANSI para darle color en la consola
+        String COLOR_CIAN = "\u001B[36m";
+        String COLOR_RESET = "\u001B[0m";
+
+        // Bloque de texto (Java 15+) con las barras invertidas ya escapadas (\\)
+        String mensaje = """
+        ╔────────────────────────────────────────────────────────────╗
+        │    ____            _   _       _     ____  ____  ____      │
+        │   / ___|___  _ __ | | | |_ __ (_)   / ___||  _ \\| ___|     │
+        │  | |   / _ \\| '_ \\| | | | '_ \\| |  | |  _ | |_) |___ \\     │
+        │  | |__| (_) | | | | |_| | | | | |  | |_| ||  _ < ___) |    │
+        │   \\____\\___/|_| |_|\\___/|_| |_|_|   \\____||_| \\_\\____/     │
+        ╚────────────────────────────────────────────────────────────╝""";
+
+        // Imprimir con el color aplicado y luego restaurar al color normal
+        System.out.println(COLOR_CIAN + mensaje + COLOR_RESET);
     }
 }
 
