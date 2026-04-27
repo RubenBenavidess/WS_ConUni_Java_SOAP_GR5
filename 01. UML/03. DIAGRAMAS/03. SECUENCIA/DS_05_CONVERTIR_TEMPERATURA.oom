@@ -967,7 +967,7 @@ ColnFKNameUse=No</a:ModelOptionsText>
 <c:ExtendedModelDefinitions>
 <o:Shortcut Id="o4">
 <a:ObjectID>DC691BF6-4B32-4573-AB8B-1BCBC3C9060F</a:ObjectID>
-<a:Name>WSDL for Java</a:Name>
+<a:Name>SERVICIO SOAP</a:Name>
 <a:Code>WSDLJava</a:Code>
 <a:CreationDate>1622316627</a:CreationDate>
 <a:Creator>johanaaracely.herre</a:Creator>
@@ -2137,8 +2137,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:UMLObject>
 <o:UMLObject Id="o65">
 <a:ObjectID>14014430-9415-4181-8F87-9C1E3484F1DE</a:ObjectID>
-<a:Name>CLIENTE_WS_CONVERSOR</a:Name>
-<a:Code>CLIENTE_WS_CONVERSOR</a:Code>
+<a:Name>CLIENTE_SOAP_CONVERSOR</a:Name>
+<a:Code>CLIENTE_SOAP_CONVERSOR</a:Code>
 <a:CreationDate>1607390037</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776652609</a:ModificationDate>
@@ -2146,8 +2146,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:UMLObject>
 <o:UMLObject Id="o67">
 <a:ObjectID>7D76832D-EA67-405C-8C01-5CED5BC82915</a:ObjectID>
-<a:Name>WS_CONVERSOR_UNIDADES</a:Name>
-<a:Code>WS_CONVERSOR_UNIDADES</a:Code>
+<a:Name>WSCONVERSORUNIDADES</a:Name>
+<a:Code>WSCONVERSORUNIDADES</a:Code>
 <a:CreationDate>1607390037</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776652609</a:ModificationDate>
@@ -2157,7 +2157,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <c:Messages>
 <o:Message Id="o61">
 <a:ObjectID>E4A21E2D-07B1-4ADF-9950-BACDB7F1EAAF</a:ObjectID>
-<a:Name>APLICACION selecciona tipo MASA</a:Name>
+<a:Name>APLICACION selecciona tipo TEMPERATURA</a:Name>
 <a:Code>APLICACION_selecciona_tipo_MASA</a:Code>
 <a:CreationDate>1776647626</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
@@ -2315,8 +2315,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o42">
 <a:ObjectID>3A6C804F-7AEF-40C0-8381-43901CFF9805</a:ObjectID>
-<a:Name>invoca clienteWs.convertirTemperatura</a:Name>
-<a:Code>invoca_clienteWs_convertirTemperatura</a:Code>
+<a:Name>invoca clienteSoap.convertirTemperatura</a:Name>
+<a:Code>invoca_clienteSoap_convertirTemperatura</a:Code>
 <a:CreationDate>1776648554</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776653478</a:ModificationDate>
@@ -2332,8 +2332,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o40">
 <a:ObjectID>0D5AEFD3-0700-4F96-8273-A762BF905ADF</a:ObjectID>
-<a:Name>ManejadorTokenSOAP detecta operacion no login</a:Name>
-<a:Code>ManejadorTokenSOAP_detecta_operacion_no_login</a:Code>
+<a:Name>ClienteSoap detecta operacion protegida</a:Name>
+<a:Code>ClienteSoap_detecta_operacion_protegida</a:Code>
 <a:CreationDate>1776650088</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776652609</a:ModificationDate>
@@ -2350,8 +2350,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o38">
 <a:ObjectID>DAB99F97-41DF-4D33-B66C-CEBB27EADE5E</a:ObjectID>
-<a:Name>ManejadorTokenSOAP obtiene tokenSesion</a:Name>
-<a:Code>ManejadorTokenSOAP_obtiene_tokenSesion</a:Code>
+<a:Name>ClienteSoap obtiene token</a:Name>
+<a:Code>ClienteSoap_obtiene_token</a:Code>
 <a:CreationDate>1776650122</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776652609</a:ModificationDate>
@@ -2368,8 +2368,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o36">
 <a:ObjectID>0929DBD7-A1B0-4BEE-A737-B60C4B522EDB</a:ObjectID>
-<a:Name>ManejadorTokenSOAP agrega header ws token</a:Name>
-<a:Code>ManejadorTokenSOAP_agrega_header_ws_token</a:Code>
+<a:Name>ClienteSoap agrega header header SOAP token</a:Name>
+<a:Code>ClienteSoap_agrega_header_SOAP_token</a:Code>
 <a:CreationDate>1776650151</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776652609</a:ModificationDate>
@@ -2421,8 +2421,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o29">
 <a:ObjectID>44D2CD3F-5D56-4919-9E0B-06E39AFC392D</a:ObjectID>
-<a:Name>ManejadorAutenticacion lee header token</a:Name>
-<a:Code>ManejadorAutenticacion_lee_header_token</a:Code>
+<a:Name>ManejadorAutenticacion lee header SOAP token</a:Name>
+<a:Code>ManejadorAutenticacion_lee_header_SOAP_token</a:Code>
 <a:CreationDate>1776650275</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776652609</a:ModificationDate>
@@ -2598,7 +2598,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:TargetModel>
 <o:TargetModel Id="o71">
 <a:ObjectID>02EFF003-EF9A-4E3C-A555-4635FDA0249A</a:ObjectID>
-<a:Name>WSDL for Java</a:Name>
+<a:Name>SERVICIO SOAP</a:Name>
 <a:Code>WSDLJava</a:Code>
 <a:CreationDate>1622316627</a:CreationDate>
 <a:Creator>johanaaracely.herre</a:Creator>

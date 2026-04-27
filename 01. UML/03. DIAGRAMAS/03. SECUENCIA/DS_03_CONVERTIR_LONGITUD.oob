@@ -967,7 +967,7 @@ ColnFKNameUse=No</a:ModelOptionsText>
 <c:ExtendedModelDefinitions>
 <o:Shortcut Id="o4">
 <a:ObjectID>FCEC5A1F-726C-478E-86B5-BD4EC561DE27</a:ObjectID>
-<a:Name>WSDL for Java</a:Name>
+<a:Name>SERVICIO SOAP</a:Name>
 <a:Code>WSDLJava</a:Code>
 <a:CreationDate>1622316451</a:CreationDate>
 <a:Creator>johanaaracely.herre</a:Creator>
@@ -1678,7 +1678,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <a:CreationDate>1776650122</a:CreationDate>
 <a:ModificationDate>1776650391</a:ModificationDate>
 <a:CenterTextOffset>(4836, -1234)</a:CenterTextOffset>
-<a:Rect>((5664,2193), (22750,4818))</a:Rect>
+<a:Rect>((5664,2179), (22750,4818))</a:Rect>
 <a:ListOfPoints>((6064,4418),(9664,4418),(9664,2818),(6064,2818))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615808</a:LineColor>
@@ -1724,7 +1724,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1776650497</a:ModificationDate>
 <a:CenterTextOffset>(-285, 228)</a:CenterTextOffset>
 <a:CenterTextWidth>10273</a:CenterTextWidth>
-<a:Rect>((-8545,7201), (6464,9934))</a:Rect>
+<a:Rect>((-8545,7201), (6464,9918))</a:Rect>
 <a:ListOfPoints>((-8145,7826),(6064,7826))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615808</a:LineColor>
@@ -1857,7 +1857,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1776650391</a:ModificationDate>
 <a:CenterTextOffset>(0, -27)</a:CenterTextOffset>
 <a:CenterTextWidth>10133</a:CenterTextWidth>
-<a:Rect>((-24790,19773), (-7643,22317))</a:Rect>
+<a:Rect>((-24790,19773), (-7643,22301))</a:Rect>
 <a:ListOfPoints>((-24390,20398),(-8043,20398))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615808</a:LineColor>
@@ -1880,7 +1880,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1776650391</a:ModificationDate>
 <a:CenterTextOffset>(0, -27)</a:CenterTextOffset>
 <a:CenterTextWidth>12061</a:CenterTextWidth>
-<a:Rect>((-24790,22723), (-7643,25277))</a:Rect>
+<a:Rect>((-24790,22723), (-7643,25261))</a:Rect>
 <a:ListOfPoints>((-24390,23348),(-8043,23348))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615808</a:LineColor>
@@ -1904,7 +1904,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1776650391</a:ModificationDate>
 <a:CenterTextOffset>(224, 5)</a:CenterTextOffset>
 <a:CenterTextWidth>12615</a:CenterTextWidth>
-<a:Rect>((-24790,25414), (-7643,28006))</a:Rect>
+<a:Rect>((-24790,25414), (-7643,27990))</a:Rect>
 <a:ListOfPoints>((-24390,26039),(-8043,26039))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615808</a:LineColor>
@@ -1928,7 +1928,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <a:ModificationDate>1776650556</a:ModificationDate>
 <a:CenterTextOffset>(1334, -222)</a:CenterTextOffset>
 <a:CenterTextWidth>13011</a:CenterTextWidth>
-<a:Rect>((-24790,28558), (-7643,30941))</a:Rect>
+<a:Rect>((-24790,28558), (-7643,30925))</a:Rect>
 <a:ListOfPoints>((-24390,29183),(-8043,29183))</a:ListOfPoints>
 <a:ArrowStyle>1</a:ArrowStyle>
 <a:LineColor>12615808</a:LineColor>
@@ -2133,8 +2133,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:UMLObject>
 <o:UMLObject Id="o65">
 <a:ObjectID>2803E425-7B08-4130-BBF8-E8C44422DDDE</a:ObjectID>
-<a:Name>CLIENTE_WS_CONVERSOR</a:Name>
-<a:Code>CLIENTE_WS_CONVERSOR</a:Code>
+<a:Name>CLIENTE_SOAP_CONVERSOR</a:Name>
+<a:Code>CLIENTE_SOAP_CONVERSOR</a:Code>
 <a:CreationDate>1607390037</a:CreationDate>
 <a:Creator>johanaaracely.herre</a:Creator>
 <a:ModificationDate>1622316984</a:ModificationDate>
@@ -2142,8 +2142,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:UMLObject>
 <o:UMLObject Id="o67">
 <a:ObjectID>5EBBFF2F-AD3A-45DB-AE4F-BE3C2C09A186</a:ObjectID>
-<a:Name>WS_CONVERSOR_UNIDADES</a:Name>
-<a:Code>WS_CONVERSOR_UNIDADES</a:Code>
+<a:Name>WSCONVERSORUNIDADES</a:Name>
+<a:Code>WSCONVERSORUNIDADES</a:Code>
 <a:CreationDate>1607390037</a:CreationDate>
 <a:Creator>johanaaracely.herre</a:Creator>
 <a:ModificationDate>1622316984</a:ModificationDate>
@@ -2311,8 +2311,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o42">
 <a:ObjectID>6D833DD1-D2D9-44A9-8FDD-5004CFF19CC2</a:ObjectID>
-<a:Name>invoca clienteWs.convertirLongitud</a:Name>
-<a:Code>invoca_clienteWs_convertirLongitud</a:Code>
+<a:Name>invoca clienteSoap.convertirLongitud</a:Name>
+<a:Code>invoca_clienteSoap_convertirLongitud</a:Code>
 <a:CreationDate>1776648554</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776648561</a:ModificationDate>
@@ -2328,8 +2328,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o40">
 <a:ObjectID>4B7F0A87-5658-431C-A0DD-1D6255E7D044</a:ObjectID>
-<a:Name>ManejadorTokenSOAP detecta operacion no login</a:Name>
-<a:Code>ManejadorTokenSOAP_detecta_operacion_no_login</a:Code>
+<a:Name>ClienteSoap detecta operacion protegida</a:Name>
+<a:Code>ClienteSoap_detecta_operacion_protegida</a:Code>
 <a:CreationDate>1776650088</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776650099</a:ModificationDate>
@@ -2346,8 +2346,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o38">
 <a:ObjectID>D3FC530F-FE4B-43B6-89C7-0430D7469EB5</a:ObjectID>
-<a:Name>ManejadorTokenSOAP obtiene tokenSesion</a:Name>
-<a:Code>ManejadorTokenSOAP_obtiene_tokenSesion</a:Code>
+<a:Name>ClienteSoap obtiene token</a:Name>
+<a:Code>ClienteSoap_obtiene_token</a:Code>
 <a:CreationDate>1776650122</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776650130</a:ModificationDate>
@@ -2364,8 +2364,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o36">
 <a:ObjectID>AB7AB300-C84A-4108-8977-C834FF1EE430</a:ObjectID>
-<a:Name>ManejadorTokenSOAP agrega header ws token</a:Name>
-<a:Code>ManejadorTokenSOAP_agrega_header_ws_token</a:Code>
+<a:Name>ClienteSoap agrega header header SOAP token</a:Name>
+<a:Code>ClienteSoap_agrega_header_SOAP_token</a:Code>
 <a:CreationDate>1776650151</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776650159</a:ModificationDate>
@@ -2417,8 +2417,8 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:Message>
 <o:Message Id="o29">
 <a:ObjectID>F0CDCF0E-849F-4146-9A43-817976749631</a:ObjectID>
-<a:Name>ManejadorAutenticacion lee header token</a:Name>
-<a:Code>ManejadorAutenticacion_lee_header_token</a:Code>
+<a:Name>ManejadorAutenticacion lee header SOAP token</a:Name>
+<a:Code>ManejadorAutenticacion_lee_header_SOAP_token</a:Code>
 <a:CreationDate>1776650275</a:CreationDate>
 <a:Creator>Jhon Santos</a:Creator>
 <a:ModificationDate>1776650367</a:ModificationDate>
@@ -2594,7 +2594,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 </o:TargetModel>
 <o:TargetModel Id="o71">
 <a:ObjectID>B6CBF0E4-9CAA-428F-BA22-8AA42EED8A2B</a:ObjectID>
-<a:Name>WSDL for Java</a:Name>
+<a:Name>SERVICIO SOAP</a:Name>
 <a:Code>WSDLJava</a:Code>
 <a:CreationDate>1622316451</a:CreationDate>
 <a:Creator>johanaaracely.herre</a:Creator>

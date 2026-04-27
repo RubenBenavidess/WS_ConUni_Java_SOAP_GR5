@@ -1,49 +1,41 @@
 @startuml
-title "DS_01_INICIALIZAR_CLIENTE_SOAP (Corregido)"
+title "DS_01_INICIALIZAR_CLIENTE_SOAP"
 
 participant "APLICACION\n(Main)" as Main
-participant "LOGIN_VISTA" as LoginVista
-participant "LOGIN_CONTROLADOR" as LoginControlador
-participant "CLIENTE_WS_CONVERSOR" as ClienteWS
-participant "ENDPOINT_WSDL" as WSDL
+participant "CLIENTE_SOAP_CONVERSOR" as ClienteSoap
+participant "WSCONVERSORUNIDADES_CLIENT" as ProxySoap
+participant "WSCONVERSORUNIDADES" as Servicio
+participant "ADMINISTRADOR_TOKENS" as Tokens
 
-Main -> LoginVista: 1. new LoginVista() / setVisible(true)
-activate LoginVista
+Main -> ClienteSoap: 1. crear cliente SOAP
+activate ClienteSoap
 
-LoginVista -> LoginControlador: 2. new LoginControlador()
-activate LoginControlador
+ClienteSoap -> ProxySoap: 2. inicializar endpoint binding SOAP (JAX-WS)
+activate ProxySoap
 
-LoginControlador -> ClienteWS: 3. new ClienteWSConversor()
-activate ClienteWS
+ClienteSoap -> ProxySoap: 3. login(usuario, contrasenia)
+ProxySoap -> Servicio: 4. login(usuario, contrasenia)
+activate Servicio
 
-ClienteWS -> ClienteWS: 4. inicializarPuerto()
-activate ClienteWS
+alt credenciales correctas
+	Servicio -> Tokens: 5. GenerarToken()
+	activate Tokens
+	Tokens --> Servicio: 6. token
+	deactivate Tokens
 
-ClienteWS -> ClienteWS: 5. construirBasesUrl()
-note right: Revisa System.getProperty("ws.base.url"),\nSystem.getenv("WS_BASE_URL"),\ny URLs por defecto.
-deactivate ClienteWS
-
-loop Para cada URL base candidata
-    ClienteWS -> WSDL: 6. Arma URL de WSDL (e.g., .../WSConversorUnidades?wsdl)
-    ClienteWS -> WSDL: 7. Intenta Service.create(wsdlUrl, qname)
-    activate WSDL
-    WSDL --> ClienteWS: 8. Retorna instancia de Service
-    deactivate WSDL
-    
-    ClienteWS -> ClienteWS: 9. port = service.getPort(...)
-    ClienteWS -> ClienteWS: 10. Fija BindingProvider.ENDPOINT_ADDRESS_PROPERTY
-    ClienteWS -> ClienteWS: 11. configurarManejadorToken(port)
-    note right: Añade ManejadorTokenSOAP al HandlerChain del binding.
-    
-    ClienteWS --> LoginControlador: 12. Retorna puerto inicializado
-    deactivate ClienteWS
-    
-    LoginControlador --> LoginVista: 13. 
-    deactivate LoginControlador
-    
-    LoginVista --> Main: 14. 
-    deactivate LoginVista
-    break
+	Servicio --> ProxySoap: 7. token
+	ProxySoap --> ClienteSoap: 8. token
+	ClienteSoap -> ClienteSoap: 9. guardar token para header SOAP "token"
+	ClienteSoap --> Main: 10. cliente inicializado y autenticado
+else credenciales incorrectas
+	Servicio --> ProxySoap: 7. RuntimeException("Credenciales incorrectas")
+	ProxySoap --> ClienteSoap: 8. error de autenticacion
+	ClienteSoap --> Main: 9. mostrar error de login
 end
 
+deactivate Servicio
+deactivate ProxySoap
+deactivate ClienteSoap
+
 @enduml
+
