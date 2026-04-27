@@ -14,10 +14,8 @@ import ec.edu.monster.seguridad.AdministradorTokens;
 import jakarta.jws.WebService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
-import jakarta.jws.HandlerChain;
 
 @WebService(serviceName = "WSConversorUnidades")
-@HandlerChain(file = "manejador.xml")
 public class WSConversorUnidades {
 
     private final ServicioConversor<UnidadLongitud> servicioLongitud =
