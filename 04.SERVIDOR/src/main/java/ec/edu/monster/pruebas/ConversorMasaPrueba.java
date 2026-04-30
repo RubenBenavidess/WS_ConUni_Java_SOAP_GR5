@@ -1,7 +1,7 @@
 package ec.edu.monster.pruebas;
 
-import ec.edu.monster.model.utilidades.ConversorMasa;
-import ec.edu.monster.model.utilidades.enums.UnidadMasa;
+import ec.edu.monster.modelos.utilidades.ConversorMasa;
+import ec.edu.monster.modelos.utilidades.enums.UnidadMasa;
 
 import java.util.Scanner;
 

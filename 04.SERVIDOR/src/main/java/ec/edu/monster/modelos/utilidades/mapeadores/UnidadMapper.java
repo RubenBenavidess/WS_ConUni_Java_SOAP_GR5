@@ -1,8 +1,8 @@
-package ec.edu.monster.model.utilidades.mapeadores;
+package ec.edu.monster.modelos.utilidades.mapeadores;
 
-import ec.edu.monster.model.utilidades.enums.UnidadTemperatura;
-import ec.edu.monster.model.utilidades.enums.UnidadMasa;
-import ec.edu.monster.model.utilidades.enums.UnidadLongitud;
+import ec.edu.monster.modelos.utilidades.enums.UnidadTemperatura;
+import ec.edu.monster.modelos.utilidades.enums.UnidadMasa;
+import ec.edu.monster.modelos.utilidades.enums.UnidadLongitud;
 
 public class UnidadMapper {
 

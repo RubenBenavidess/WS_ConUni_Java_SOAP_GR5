@@ -1,5 +1,5 @@
-import ec.edu.monster.model.utilidades.enums.UnidadTemperatura;
-import ec.edu.monster.model.utilidades.ConversorTemperatura;
+import ec.edu.monster.modelos.utilidades.enums.UnidadTemperatura;
+import ec.edu.monster.modelos.utilidades.ConversorTemperatura;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 

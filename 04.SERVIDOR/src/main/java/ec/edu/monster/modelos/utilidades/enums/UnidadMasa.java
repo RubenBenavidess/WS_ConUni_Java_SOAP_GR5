@@ -1,4 +1,4 @@
-package ec.edu.monster.model.utilidades.enums;
+package ec.edu.monster.modelos.utilidades.enums;
 
 public enum UnidadMasa {
     MILIGRAMO,

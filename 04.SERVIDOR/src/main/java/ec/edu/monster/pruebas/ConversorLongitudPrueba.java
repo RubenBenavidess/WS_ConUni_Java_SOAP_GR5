@@ -1,7 +1,7 @@
 package ec.edu.monster.pruebas;
 
-import ec.edu.monster.model.utilidades.ConversorLongitud;
-import ec.edu.monster.model.utilidades.enums.UnidadLongitud;
+import ec.edu.monster.modelos.utilidades.ConversorLongitud;
+import ec.edu.monster.modelos.utilidades.enums.UnidadLongitud;
 
 import java.util.Scanner;
 

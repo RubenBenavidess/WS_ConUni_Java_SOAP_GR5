@@ -1,13 +1,13 @@
-package ec.edu.monster.controller.ws;
+package ec.edu.monster.controladores.ws;
 
-import ec.edu.monster.model.utilidades.enums.UnidadTemperatura;
-import ec.edu.monster.model.utilidades.enums.UnidadMasa;
-import ec.edu.monster.model.utilidades.enums.UnidadLongitud;
-import ec.edu.monster.model.utilidades.ConversorTemperatura;
-import ec.edu.monster.model.utilidades.ConversorMasa;
-import ec.edu.monster.model.utilidades.ConversorLongitud;
-import ec.edu.monster.model.servicios.ServicioConversor;
-import ec.edu.monster.model.utilidades.mapeadores.UnidadMapper;
+import ec.edu.monster.modelos.utilidades.enums.UnidadTemperatura;
+import ec.edu.monster.modelos.utilidades.enums.UnidadMasa;
+import ec.edu.monster.modelos.utilidades.enums.UnidadLongitud;
+import ec.edu.monster.modelos.utilidades.ConversorTemperatura;
+import ec.edu.monster.modelos.utilidades.ConversorMasa;
+import ec.edu.monster.modelos.utilidades.ConversorLongitud;
+import ec.edu.monster.servicios.ServicioConversor;
+import ec.edu.monster.modelos.utilidades.mapeadores.UnidadMapper;
 import ec.edu.monster.seguridad.AdministradorCredenciales;
 import ec.edu.monster.seguridad.AdministradorTokens;
 

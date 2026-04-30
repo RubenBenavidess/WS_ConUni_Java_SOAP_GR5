@@ -1,5 +1,5 @@
-import ec.edu.monster.model.utilidades.enums.UnidadLongitud;
-import ec.edu.monster.model.utilidades.ConversorLongitud;
+import ec.edu.monster.modelos.utilidades.enums.UnidadLongitud;
+import ec.edu.monster.modelos.utilidades.ConversorLongitud;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
